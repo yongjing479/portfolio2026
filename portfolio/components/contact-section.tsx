@@ -2,9 +2,9 @@ import { Mail, Share2, Linkedin } from "lucide-react"
 
 export function ContactSection() {
   const contacts = [
-    { icon: Mail, label: "EMAIL", href: "mailto:yongjing@example.com" },
-    { icon: Share2, label: "LINKTREE", href: "#" },
-    { icon: Linkedin, label: "LINKEDIN", href: "#" },
+    { icon: Mail, label: "EMAIL", href: "mailto:yjing479@gmail.com" },
+    { icon: "/github.png", label: "GITHUB", href: "https://github.com/yongjing479" , isCustom: true, iconSrc: "/github.png" },
+    { icon: Linkedin, label: "LINKEDIN", href: "https://www.linkedin.com/in/yong-jing-ng" },
   ]
 
   return (
@@ -27,7 +27,15 @@ export function ContactSection() {
                 className="group flex flex-col items-center gap-3 transition-colors"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-secondary transition-colors group-hover:border-primary group-hover:bg-primary/10">
-                  <contact.icon className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-primary" />
+                  {contact.isCustom ? (
+                    <img 
+                      src={contact.icon as string} 
+                      alt={contact.label} 
+                      className="h-5 w-5 opacity-60 transition-opacity group-hover:opacity-100" 
+                    />
+                  ) : (
+                    <contact.icon className="h-5 w-5 text-muted-foreground transition-colors group-hover:text-primary" />
+                  )}
                 </div>
                 <span className="text-xs tracking-widest text-muted-foreground transition-colors group-hover:text-foreground">
                   {contact.label}
