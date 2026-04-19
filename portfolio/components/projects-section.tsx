@@ -1,6 +1,5 @@
 "use client";
 
-import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 export function ProjectsSection() {
@@ -10,7 +9,7 @@ export function ProjectsSection() {
       description: "Strategic redesign of the Carlo Rino eCommerce platform to improve user journey, product discovery, and conversion rates.",
       tags: ["Figma", "E-commerce"],
       image: "/carlorino-cover.png",
-      label: "UI/UX DESIGN",
+      label: "CASE STUDY",
       link: "https://drive.google.com/file/d/1KhJGCv7ZDE5e_y_r-Q28kYSUFd0aT22J/view?usp=sharing",
       figmaUrl: "https://www.figma.com/design/PFUykv7sLMWPp7SD4Z2AAS/FourFuture---Carlo-Rino-UIUX--Copy-?node-id=0-1&t=PpcAgqt0gSbYWGlu-1",
     },
@@ -32,11 +31,11 @@ export function ProjectsSection() {
       link: "https://www.google.com",
     },
     {
-      title: "Task Orchestrator",
-      description: "A SaaS productivity tool designed for high-performance teams to manage complex workflows and task orchestration.",
-      tags: ["SaaS", "Branding"],
-      image: null,
-      label: "VOID FLOW",
+      title: "FreshRescue",
+      description: "A platform that rescues imperfect produce and near-expiry food, connecting suppliers to urban consumers.",
+      tags: ["Figma", "React JS"],
+      image: "/freshrescue-cover.png",
+      label: "UI/UX DESIGN",
       link: "#",
     }
   ];
