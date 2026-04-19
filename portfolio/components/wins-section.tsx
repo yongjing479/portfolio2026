@@ -28,7 +28,14 @@ export function WinsSection() {
         "Co-founded & led branding direction for Benih Bumi, a social enterprise transforming textile waste into plushies of Malaysia endangered animals in 3 months.",
       image: "/ylateam.jpeg",
       details:
-        "During this intensive 3-month program, I collaborated with a diverse team of aspiring leaders to develop Benih Bumi from concept to execution. My role focused on establishing the brand identity, creating visual assets, and ensuring consistent messaging across all touchpoints. The project successfully raised awareness about textile waste while celebrating Malaysia's endangered wildlife.",
+        "As Chief Branding Officer, I collaborated with a team of 5 to build Benih Bumi from concept to launch in just 3 months.\n\n" +
+        "• Branding & Creative: Led the complete visual identity, product design, and social media presence.\n" +
+        "• Experiential Design: Designed the booth experience for the Klang River Festival to drive community engagement.\n" +
+        "• Strategy: Developed marketing and product strategies to strengthen brand positioning.\n\n" +
+        "IMPACT:\n" +
+        "• Economic: Generated RM2,200 for B40 women tailors.\n" +
+        "• Conservation: Donated RM1,000 to MareCet (marine conservation NGO).\n" +
+        "• Storytelling: Delivered high-impact pitches focused on textile waste problem-framing.",
     },
     {
       date: "July 2024",
@@ -38,7 +45,15 @@ export function WinsSection() {
         "Redesigned & Proposed new features on Carlo Rino eCommerce platform to create smart, stylish & surprise shopping experience.",
       image: "/carlorino.jpeg",
       details:
-        "Conducted comprehensive user research and competitive analysis to identify pain points in the existing Carlo Rino shopping experience. Proposed innovative features including personalized style recommendations, AR try-on functionality, and a gamified loyalty program that resonated with the judges.",
+      "As UI/UX Design Lead, I spearheaded the platform's visual overhaul, focusing on reducing friction in the user journey and boosting product discoverability.\n\n" +
+        "DESIGN & INNOVATION:\n" +
+        "• Feature Initiation: Proposed high-clarity features including 360° product views and \"Notify Me\" restock alerts.\n" +
+        "• Community Engagement: Conceptualized integrated community features to foster brand loyalty.\n" +
+        "• Platform Excellence: Designed the core landing page with a focus on visual hierarchy and full mobile responsiveness.\n\n" +
+        "TECHNICAL EXECUTION:\n" +
+        "• User Analysis: Identified navigation friction points and redesigned user flows to optimize CTA placement.\n" +
+        "• High-Fidelity Prototyping: Built interactive Figma prototypes showcasing improved purchase experiences.\n" +
+        "• Result: Successfully achieved a Top 10 ranking among all participants in the competition.",
     },
     {
       date: "Jan 2024",
@@ -47,17 +62,23 @@ export function WinsSection() {
       description: "Pitched an app solution that combat with food waste.",
       image: "/kitahack.jpeg",
       details:
-        "Developed and pitched a mobile application connecting consumers with restaurants and grocery stores to purchase surplus food at discounted prices. The solution addressed food waste at multiple points in the supply chain while making quality food more accessible to budget-conscious consumers.",
+      "Evolved the FreshRescue concept by identifying how Generative AI could bridge the gap between food waste and user cooking habits.\n\n" +
+        "• Problem-Solution Fit: Analyzed user pain points to justify the integration of Gemini AI for accurate, surplus-based recipe generation.\n" +
+        "• Product Vision: Defined how AI features would enhance the original marketplace model to provide more immediate value to the user.\n" +
+        "• Impactful Storytelling: Focused the pitch on problem-framing and the strategic fit of the solution, securing the 'Best Pitch Award.'" ,
     },
     {
       date: "April 2024",
       title: "Head of Creation - UM Hackathon 2024",
       org: "Persatuan Komputer Universiti Malaya (PEKOM)",
       description:
-        "Led a team of 10, overseeing all visual, stage & creative materials including provide guidance on UI/UX Design for the event website.",
+        "Led a creative department of 10 to deliver end-to-end branding and visual experiences for one of UM's flagship tech events.",      
       image: "/umh2024.jpeg",
       details:
-        "Managed end-to-end creative direction for one of Malaysia's largest student hackathons. Responsibilities included designing the event branding, coordinating with vendors for physical materials, mentoring junior designers, and ensuring the event website delivered an excellent user experience for over 500 participants.",
+       "Directly oversaw the visual identity and user experience for one of FSKTM's flagship tech events.\n\n" +
+        "• Leadership: Managed a 10-person creative squad across stage, and merchandise departments.\n" +
+        "• UX Audit: Led the UI/UX direction for the event website to ensure clear navigation for 500+ attendees.\n" +
+        "• Branding: Maintained strict visual consistency across all physical print and digital touchpoints.",
     },
     {
       date: "Dec 2023",
@@ -67,7 +88,13 @@ export function WinsSection() {
         "Led UI/UX design & pitched an app named FreshRescue which rescues visually imperfect foods & nearly expired food.",
       image: "/devhack.jpeg",
       details:
-        "Won first place among international teams by designing and presenting FreshRescue, an app that connects consumers with imperfect but perfectly edible produce. Created the complete design system, user flows, and high-fidelity prototypes while also delivering the winning pitch presentation.",
+      "As the Lead Designer, I focused on creating an intuitive B2B2C marketplace that bridges the gap between surplus food suppliers and eco-conscious consumers.\n\n" +
+        "DESIGN ARCHITECTURE:\n" +
+        "• User Flow Optimization: Defined complex flows for multi-persona features, including 'Surprise Bag' purchases, seamless donation channels, and community engagement hubs.\n" +
+        "• Intuitive Interface: Designed high-fidelity interfaces in Figma with a focus on accessibility, ensuring that users of all ages could navigate the 'Rescue' process easily.\n\n" +
+        "PROJECT IMPACT:\n" +
+        "• Global Competition: Outperformed 154 teams from 9 countries to secure the Champion title.\n" +
+        "• Problem-Solving: Translated the abstract problem of food waste into a tangible, high-impact digital solution recognized for its scalability and user-centric approach.",
     },
   ];
 
@@ -229,7 +256,7 @@ export function WinsSection() {
                   <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
                     Details
                   </h4>
-                  <p className="text-sm leading-relaxed text-foreground">
+                  <p className="whitespace-pre-line text-sm leading-relaxed text-foreground">
                     {selectedAchievement.details}
                   </p>
                 </div>
