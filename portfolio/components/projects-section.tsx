@@ -125,11 +125,11 @@ export function ProjectsSection() {
                       href={project.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="group/github flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-[10px] font-bold text-foreground transition-all hover:bg-primary hover:text-white"
+                      className="flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-[10px] font-bold text-foreground transition-all hover:bg-primary hover:text-white"
                       onClick={(e) => e.stopPropagation()}
                     >
                       <div className="relative h-3.5 w-3.5">
-                        <Image src="/github.png" alt="GitHub" fill className="object-contain transition-all group-hover/github:invert" />
+                        <Image src="/github.png" alt="GitHub" fill className="object-contain transition-all" />
                       </div>
                       GITHUB
                     </a>
@@ -143,7 +143,9 @@ export function ProjectsSection() {
                       className="flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-[10px] font-bold text-foreground transition-all hover:bg-primary hover:text-white"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <ExternalLink className="h-3 w-3" />
+                     <div className="relative h-3.5 w-3.5">
+                        <Image src="/figma.png" alt="GitHub" fill className="object-contain transition-all" />
+                      </div>
                       FIGMA
                     </a>
                   )}
