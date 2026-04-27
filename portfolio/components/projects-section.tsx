@@ -7,11 +7,29 @@ export function ProjectsSection() {
     {
       title: "Carlo Rino UI/UX Redesign",
       description: "Strategic redesign of the Carlo Rino eCommerce platform to improve user journey, product discovery, and conversion rates.",
-      tags: ["Figma", "E-commerce"],
+      tags: ["Figma", "Website UI","Mobile App UI"],
       image: "/carlorino-cover.png",
-      label: "CASE STUDY",
+      label: "UI/UX DESIGN",
       link: "https://drive.google.com/file/d/1KhJGCv7ZDE5e_y_r-Q28kYSUFd0aT22J/view?usp=sharing",
       figmaUrl: "https://www.figma.com/design/PFUykv7sLMWPp7SD4Z2AAS/FourFuture---Carlo-Rino-UIUX--Copy-?node-id=0-1&t=PpcAgqt0gSbYWGlu-1",
+    },
+    {
+      title: "FreshRescue",
+      description: "A platform that rescues imperfect produce and near-expiry food, connecting suppliers to urban consumers.",
+      tags: ["Figma", "Mobile App UI"],
+      image: "/freshrescue-cover.png",
+      label: "UI/UX DESIGN",
+      link:"https://drive.google.com/file/d/19K_8gqJMPg552JNl76bNniOAOYPNnuhd/view?usp=sharing",
+      figmaUrl: "https://www.figma.com/design/PddSHdwzWV4S6QIfo6QN2y/DevHack-Prototype?node-id=1813-2618&t=rw7eDcQ5jsy2yfPQ-1",
+    },
+    {
+      title: "KOPI KITA",
+      description: "UX-driven coffee experience concept for Nescafé that connects modular coffee products with a QR-powered mobile app.",
+      tags: ["Figma", "Mobile App UI"],
+      image: "/kopikita-cover.png",
+      label: "UI/UX DESIGN & Business Strategy",
+      link: "https://drive.google.com/file/d/1mnDbEm99gfKkDXwaNRU3Q-5G24RTjo7o/view?usp=sharing",
+      figmaUrl:"https://www.figma.com/design/vPPJdZVANpPy5Ouxc5dnoU/Kopi-Kita-Project-NYEP-2025?node-id=2023-556&t=wzYRzcrs6xXFwg5f-1",
     },
     {
       title: "DisasterLens",
@@ -22,22 +40,6 @@ export function ProjectsSection() {
       label: "FINAL YEAR PROJECT",
       link: "https://github.com/rachelfong0320/DisasterLens",
     },
-    {
-      title: "Benih Bumi - Social Enterprise",
-      description: "A social enterprise transforming textile waste into marine-themed plushies to support B40 women tailors and marine conservation.",
-      tags: ["Branding", "Product Design", "Social Impact"],
-      image: "/benihbumi-cover.png",
-      label: "CHIEF BRANDING OFFICER",
-      link: "https://www.google.com",
-    },
-    {
-      title: "FreshRescue",
-      description: "A platform that rescues imperfect produce and near-expiry food, connecting suppliers to urban consumers.",
-      tags: ["Figma", "React JS"],
-      image: "/freshrescue-cover.png",
-      label: "UI/UX DESIGN",
-      link: "#",
-    }
   ];
 
 return (
@@ -98,10 +100,10 @@ return (
                     <a 
                       href={project.link} 
                       target="_blank" 
-                      className="group/github flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-[10px] font-bold text-foreground transition-all hover:bg-primary hover:text-white"
+                      className="group/github flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-[10px] font-bold text-foreground border border-white transition-all hover:border-primary hover:bg-primary hover:text-white"
                     >
                       <div className="relative h-3.5 w-3.5">
-                        <Image src="/github.png" alt="GitHub" fill className="object-contain transition-all group-hover/github:invert" />
+                        <Image src="/github.png" alt="GitHub" fill className="object-contain transition-all" />
                       </div>
                       GITHUB
                     </a>
@@ -110,7 +112,7 @@ return (
                     <a 
                       href={project.figmaUrl} 
                       target="_blank" 
-                      className="flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-[10px] font-bold text-foreground transition-all hover:bg-primary hover:text-white"
+                      className="flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 text-[10px] font-bold text-foreground border border-white transition-all hover:border-primary hover:bg-primary hover:text-white"
                     >
                       <div className="relative h-3.5 w-3.5">
                         <Image src="/figma.png" alt="Figma" fill className="object-contain" />
