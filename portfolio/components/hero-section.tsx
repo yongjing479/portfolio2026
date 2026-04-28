@@ -1,5 +1,4 @@
 import { ScrollReveal } from "./scroll-reveal";
-import { Navigation } from "./navigation"; // Import your nav here
 
 export function HeroSection() {
   return (
@@ -27,7 +26,7 @@ export function HeroSection() {
           </h1>
           
           <p className="animate-fade-rise-delay text-muted-foreground text-base sm:text-lg max-w-2xl mt-8 leading-relaxed">
-            I am a UI/UX Designer and web developer based in Malaysia, focusing on high-impact projects and engineering leadership.
+            UI/UX Designer with a Software Engineering background, passionate about building thoughtful, user-centered digital experiences. 
           </p>
         </div>
       </ScrollReveal>
