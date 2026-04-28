@@ -1,17 +1,33 @@
 import { ScrollReveal } from "./scroll-reveal";
+import { Navigation } from "./navigation"; // Import your nav here
 
 export function HeroSection() {
   return (
-    <section className="flex min-h-screen flex-col justify-center px-6 pt-20">
+    <section className="relative h-screen w-full flex flex-col overflow-hidden">
+      {/* 1. The Navigation must be here to stay over the video */}
+
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        /* Ensure z-0 is set so it stays behind everything */
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4" type="video/mp4" />
+      </video>
+
       <ScrollReveal>
-        <div className="mx-auto w-full max-w-6xl">
-          <h1 className="text-6xl font-bold tracking-tight md:text-7xl lg:text-8xl">
-            <span className="block text-foreground">Hi, I&apos;m</span>
-            <span className="block text-primary">Yong Jing</span>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pt-50 pb-40">
+          <h1 
+            className="animate-fade-rise text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-7xl font-normal text-foreground"
+            style={{ fontFamily: "'Instrument Serif', serif" }}
+          >
+            I am <em className="not-italic text-muted-foreground">Yong Jing</em>
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            A software engineering fresh graduate who interested in UI/UX Design
-            & passionate to solve real world problem using technologies.
+          
+          <p className="animate-fade-rise-delay text-muted-foreground text-base sm:text-lg max-w-2xl mt-8 leading-relaxed">
+            I am a UI/UX Designer and web developer based in Malaysia, focusing on high-impact projects and engineering leadership.
           </p>
         </div>
       </ScrollReveal>

@@ -139,3 +139,57 @@
     scroll-behavior: smooth;
   }
 }
+
+@layer base {
+  :root {
+    --background: 201 100% 13%;
+    --foreground: 0 0% 100%;
+    --muted-foreground: 240 4% 66%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 10%;
+    --muted: 0 0% 10%;
+    --accent: 0 0% 10%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+  }
+}
+
+/* Liquid Glass Effect */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(8px); /* Increased blur for a more premium glass feel */
+  -webkit-backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+  border: none !important; /* Removes any default shadcn borders */
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px; /* Slightly thinner line for elegance */
+  /* This creates the thin "rim" light on the edge of the glass */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%, 
+    rgba(255, 255, 255, 0) 50%, 
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Cinematic Rise Animations */
+@keyframes fade-rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-rise { animation: fade-rise 0.8s ease-out both; }
+.animate-fade-rise-delay { animation: fade-rise 0.8s ease-out 0.2s both; }
+.animate-fade-rise-delay-2 { animation: fade-rise 0.8s ease-out 0.4s both; }
