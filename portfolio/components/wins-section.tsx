@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
+import { ScrollReveal } from "./scroll-reveal";
 
 interface Achievement {
   date: string;
@@ -45,9 +46,9 @@ export function WinsSection() {
         "Redesigned & Proposed new features on Carlo Rino eCommerce platform to create smart, stylish & surprise shopping experience.",
       image: "/carlorino.jpeg",
       details:
-      "As UI/UX Design Lead, I spearheaded the platform's visual overhaul, focusing on reducing friction in the user journey and boosting product discoverability.\n\n" +
+        "As UI/UX Design Lead, I spearheaded the platform's visual overhaul, focusing on reducing friction in the user journey and boosting product discoverability.\n\n" +
         "DESIGN & INNOVATION:\n" +
-        "• Feature Initiation: Proposed high-clarity features including 360° product views and \"Notify Me\" restock alerts.\n" +
+        '• Feature Initiation: Proposed high-clarity features including 360° product views and "Notify Me" restock alerts.\n' +
         "• Community Engagement: Conceptualized integrated community features to foster brand loyalty.\n" +
         "• Platform Excellence: Designed the core landing page with a focus on visual hierarchy and full mobile responsiveness.\n\n" +
         "TECHNICAL EXECUTION:\n" +
@@ -62,20 +63,20 @@ export function WinsSection() {
       description: "Pitched an app solution that combat with food waste.",
       image: "/kitahack.jpeg",
       details:
-      "Evolved the FreshRescue concept by identifying how Generative AI could bridge the gap between food waste and user cooking habits.\n\n" +
+        "Evolved the FreshRescue concept by identifying how Generative AI could bridge the gap between food waste and user cooking habits.\n\n" +
         "• Problem-Solution Fit: Analyzed user pain points to justify the integration of Gemini AI for accurate, surplus-based recipe generation.\n" +
         "• Product Vision: Defined how AI features would enhance the original marketplace model to provide more immediate value to the user.\n" +
-        "• Impactful Storytelling: Focused the pitch on problem-framing and the strategic fit of the solution, securing the 'Best Pitch Award.'" ,
+        "• Impactful Storytelling: Focused the pitch on problem-framing and the strategic fit of the solution, securing the 'Best Pitch Award.'",
     },
     {
       date: "April 2024",
       title: "Head of Creation - UM Hackathon 2024",
       org: "Persatuan Komputer Universiti Malaya (PEKOM)",
       description:
-        "Led a creative department of 10 to deliver end-to-end branding and visual experiences for one of UM's flagship tech events.",      
+        "Led a creative department of 10 to deliver end-to-end branding and visual experiences for one of UM's flagship tech events.",
       image: "/umh2024.jpeg",
       details:
-       "Directly oversaw the visual identity and user experience for one of FSKTM's flagship tech events.\n\n" +
+        "Directly oversaw the visual identity and user experience for one of FSKTM's flagship tech events.\n\n" +
         "• Leadership: Managed a 10-person creative squad across stage, and merchandise departments.\n" +
         "• UX Audit: Led the UI/UX direction for the event website to ensure clear navigation for 500+ attendees.\n" +
         "• Branding: Maintained strict visual consistency across all physical print and digital touchpoints.",
@@ -88,7 +89,7 @@ export function WinsSection() {
         "Led UI/UX design & pitched an app named FreshRescue which rescues visually imperfect foods & nearly expired food.",
       image: "/devhack.jpeg",
       details:
-      "As the Lead Designer, I focused on creating an intuitive B2B2C marketplace that bridges the gap between surplus food suppliers and eco-conscious consumers.\n\n" +
+        "As the Lead Designer, I focused on creating an intuitive B2B2C marketplace that bridges the gap between surplus food suppliers and eco-conscious consumers.\n\n" +
         "DESIGN ARCHITECTURE:\n" +
         "• User Flow Optimization: Defined complex flows for multi-persona features, including 'Surprise Bag' purchases, seamless donation channels, and community engagement hubs.\n" +
         "• Intuitive Interface: Designed high-fidelity interfaces in Figma with a focus on accessibility, ensuring that users of all ages could navigate the 'Rescue' process easily.\n\n" +
@@ -127,39 +128,41 @@ export function WinsSection() {
   return (
     <>
       <section id="wins" className="px-6 py-24">
-        <div className="mx-auto max-w-6xl">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary">
-            Milestones
-          </p>
-          <h2 className="mt-2 text-4xl font-bold tracking-tight">
-            Wins & Achievements
-          </h2>
+        <ScrollReveal>
+          <div className="mx-auto max-w-6xl">
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+              Milestones
+            </p>
+            <h2 className="mt-2 text-4xl font-bold tracking-tight">
+              Wins & Achievements
+            </h2>
 
-          <div className="mt-12 space-y-0">
-            {achievements.map((achievement, index) => (
-              <button
-                key={index}
-                onClick={() => setSelectedAchievement(achievement)}
-                className="group grid w-full cursor-pointer border-t border-border py-8 text-left transition-all duration-300 ease-out hover:bg-white/5 hover:scale-[1.01] md:grid-cols-[120px_1fr] rounded-lg px-4 -mx-4"
-              >
-                <span className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
-                  {achievement.date}
-                </span>
-                <div className="mt-2 md:mt-0">
-                  <h3 className="text-lg font-semibold text-foreground transition-colors duration-300">
-                    {achievement.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-primary transition-colors duration-300">
-                    by {achievement.org}
-                  </p>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground transition-colors duration-300 group-hover:text-foreground/70">
-                    {achievement.description}
-                  </p>
-                </div>
-              </button>
-            ))}
+            <div className="mt-12 space-y-0">
+              {achievements.map((achievement, index) => (
+                <button
+                  key={index}
+                  onClick={() => setSelectedAchievement(achievement)}
+                  className="group grid w-full cursor-pointer border-t border-border py-8 text-left transition-all duration-300 ease-out hover:bg-white/5 hover:scale-[1.01] md:grid-cols-[120px_1fr] rounded-lg px-4 -mx-4"
+                >
+                  <span className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
+                    {achievement.date}
+                  </span>
+                  <div className="mt-2 md:mt-0">
+                    <h3 className="text-lg font-semibold text-foreground transition-colors duration-300">
+                      {achievement.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-primary transition-colors duration-300">
+                      by {achievement.org}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground transition-colors duration-300 group-hover:text-foreground/70">
+                      {achievement.description}
+                    </p>
+                  </div>
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
 
       {/* Modal Popup */}
