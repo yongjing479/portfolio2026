@@ -2,19 +2,8 @@ import { ScrollReveal } from "./scroll-reveal";
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen w-full flex flex-col overflow-hidden">
-      {/* 1. The Navigation must be here to stay over the video */}
-
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        /* Ensure z-0 is set so it stays behind everything */
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260314_131748_f2ca2a28-fed7-44c8-b9a9-bd9acdd5ec31.mp4" type="video/mp4" />
-      </video>
+    <section className="relative h-[95vh] w-full flex flex-col overflow-hidden rounded-b-[48px]">
+      
 
       <ScrollReveal>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 pt-50 pb-40">

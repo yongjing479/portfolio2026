@@ -36,7 +36,7 @@ export function JourneySection() {
   ];
 
   return (
-    <section id="journey" className="px-6 py-24">
+    <section id="journey" className="liquid-glass rounded-[40px] p-8 md:p-12 shadow-2xl backdrop-blur-md">
       <ScrollReveal>
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-[300px_1fr]">

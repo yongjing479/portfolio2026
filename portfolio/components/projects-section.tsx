@@ -74,7 +74,7 @@ export function ProjectsSection() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group relative flex flex-col rounded-2xl border-2 border-border bg-card p-6 transition-all duration-300 hover:border-primary/50"
+                className="liquid-glass rounded-[40px] md:p-12 shadow-2xl backdrop-blur-md group relative flex flex-col border-2 border-border bg-card p-6 transition-all duration-300 hover:border-primary/50"
               >
                 {/* Header: Label */}
                 <div className="mb-4">

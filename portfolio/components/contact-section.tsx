@@ -22,14 +22,14 @@ export function ContactSection() {
     <section id="contact" className="px-6 py-24">
       <ScrollReveal>
         <div className="mx-auto max-w-6xl">
-          <div className="rounded-2xl bg-card py-20 text-center">
+          <div className="liquid-glass rounded-[40px] p-8 md:p-12 shadow-2xl backdrop-blur-md py-20 text-center">
             <h2 className="text-balance text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               Let&apos;s work{" "}
               <span className="text-muted-foreground">together</span>
             </h2>
             <p className="mx-auto mt-6 max-w-md text-muted-foreground">
               Always open to discussing high-impact projects, design
-              consultations, or engineering leadership roles.
+              consultations.
             </p>
 
             <div className="mt-12 flex items-center justify-center gap-12">
@@ -60,7 +60,7 @@ export function ContactSection() {
 
           {/* Footer */}
           <footer className="mt-16 border-t border-border pt-8 text-center">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-foreground">
               Designed & Built by Yong Jing
             </p>
           </footer>
