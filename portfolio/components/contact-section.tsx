@@ -22,7 +22,7 @@ export function ContactSection() {
     <section id="contact" className="px-6 py-24">
       <ScrollReveal>
         <div className="mx-auto max-w-6xl">
-          <div className="liquid-glass rounded-[40px] p-8 md:p-12 shadow-2xl backdrop-blur-md py-20 text-center">
+          <div className="liquid-glass rounded-[40px] p-8 md:p-12 shadow-2xl backdrop-blur-2xl py-20 text-center">
             <h2 className="text-balance text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               Let&apos;s work{" "}
               <span className="text-muted-foreground">together</span>

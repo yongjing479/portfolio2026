@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import { ScrollReveal } from "./scroll-reveal";
 
@@ -19,6 +20,8 @@ export function WinsSection() {
     useState<Achievement | null>(null);
   const [isClosing, setIsClosing] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
 
   const achievements: Achievement[] = [
     {
@@ -99,6 +102,10 @@ export function WinsSection() {
     },
   ];
 
+  useEffect(() => {
+    setMounted(true);
+  },[]);
+
   // Handle opening animation
   useEffect(() => {
     if (selectedAchievement && !isClosing) {
@@ -132,16 +139,16 @@ export function WinsSection() {
             <p className="text-xs font-semibold uppercase tracking-widest text-primary">
               Milestones
             </p>
-            <h2 className="mt-2 text-4xl font-bold tracking-tight">
+            <h2 className="mt-2 text-4xl font-bold tracking-tight text-foreground">
               Wins & Achievements
             </h2>
 
-            <div className="mt-12 space-y-0">
+            <div className="liquid-glass backdrop-blur-2xl rounded-[40px] p-8 md:p-12 shadow-2xl py-20 mt-12 space-y-0 overflow-hidden">
               {achievements.map((achievement, index) => (
                 <button
                   key={index}
                   onClick={() => setSelectedAchievement(achievement)}
-                  className="group grid w-full cursor-pointer border-t border-border py-8 text-left transition-all duration-300 ease-out hover:bg-white/5 hover:scale-[1.01] md:grid-cols-[120px_1fr] rounded-lg px-4 -mx-4"
+                  className="group grid w-full cursor-pointer py-8 text-left transition-all duration-300 ease-out hover:bg-white/5 hover:scale-[1.01] md:grid-cols-[120px_1fr] rounded-lg px-4 -mx-4"
                 >
                   <span className="text-sm text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
                     {achievement.date}
@@ -164,40 +171,32 @@ export function WinsSection() {
         </ScrollReveal>
       </section>
 
-      {/* Modal Popup */}
-      {selectedAchievement && (
+      {mounted && selectedAchievement && 
+       createPortal(
         <div
-          className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300 ease-out ${
-            isVisible
-              ? "bg-black/60 backdrop-blur-md" 
-              : "bg-black/0 backdrop-blur-none"
+          className={`fixed inset-0 z-[9999] flex items-center justify-center p-4 transition-all duration-300 ease-out ${
+            isVisible ? "bg-black/70 backdrop-blur-2xl" : "bg-black/0 backdrop-blur-none"
           }`}
           onClick={handleBackdropClick}
         >
           <div
-            className={`relative flex flex-col max-h-[85vh] w-full max-w-2xl rounded-2xl border border-white/10 shadow-2xl transition-all duration-300 ease-out liquid-glass bg-black/80 backdrop-blur-xl ${
-              isVisible
-                ? "opacity-100 scale-100 translate-y-0"
-                : "opacity-0 scale-95 translate-y-4"
+            className={`relative flex flex-col max-h-[90vh] w-full max-w-2xl rounded-2xl border border-white/10 shadow-2xl transition-all duration-300 ease-out liquid-glass bg-black/90 backdrop-blur-xl ${
+              isVisible ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-4"
             }`}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* NEW SCROLLABLE INNER CONTAINER */}
+            {/* Scrollable Container */}
             <div className="overflow-y-auto p-6 custom-scrollbar">
-              <div
-                className={`relative mb-6 aspect-video w-full overflow-hidden rounded-xl bg-white/5 border border-border transition-all duration-500 delay-100 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-                }`}
-              >
-                {/* Close Button - floats on image */}
+              {/* Image Section */}
+              <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-xl bg-white/5 border border-white/10">
                 <button
                   onClick={handleClose}
-                  className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white/80 backdrop-blur-sm transition-all duration-200 hover:bg-primary hover:text-white hover:rotate-90 hover:scale-110 active:scale-95"
+                  className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white/80 backdrop-blur-sm transition-all duration-200 hover:bg-primary hover:text-white hover:rotate-90 hover:scale-110"
                   aria-label="Close"
                 >
                   <X className="h-5 w-5" />
                 </button>
-                
+
                 {selectedAchievement.image ? (
                   <Image
                     src={selectedAchievement.image}
@@ -205,6 +204,7 @@ export function WinsSection() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 800px"
+                    priority
                   />
                 ) : (
                   <div className="flex h-full items-center justify-center text-muted-foreground">
@@ -213,48 +213,35 @@ export function WinsSection() {
                 )}
               </div>
 
-              {/* Content */}
-              <div className="space-y-4">
-                <div
-                  className={`transition-all duration-500 delay-150 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-                  }`}
-                >
-                  <span className="text-xs font-medium text-primary">
+              {/* Text Content */}
+              <div className="space-y-6">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-primary">
                     {selectedAchievement.date}
                   </span>
-                  <h3 className="mt-1 text-2xl font-bold text-foreground">
+                  <h3 className="mt-1 text-2xl font-bold text-white leading-tight">
                     {selectedAchievement.title}
                   </h3>
-                  <p className="mt-1 text-sm text-primary">
+                  <p className="mt-1 text-sm font-medium text-primary">
                     by {selectedAchievement.org}
                   </p>
                 </div>
 
-                <div
-                  className={`space-y-3 border-t border-border pt-4 transition-all duration-500 delay-200 ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-                  }`}
-                >
-                  <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                <div className="border-t border-white/10 pt-5">
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
                     About
                   </h4>
-                  {/* Updated text color to white/80 for better readability on blur */}
-                  <p className="text-sm leading-relaxed text-white/80">
+                  <p className="text-sm leading-relaxed text-white/90">
                     {selectedAchievement.description}
                   </p>
                 </div>
 
                 {selectedAchievement.details && (
-                  <div
-                    className={`space-y-3 border-t border-border pt-4 transition-all duration-500 delay-300 ${
-                      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-                    }`}
-                  >
-                    <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                      Details
+                  <div className="border-t border-white/10 pt-5 pb-2">
+                    <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                      Details & Impact
                     </h4>
-                    <p className="whitespace-pre-line text-sm leading-relaxed text-white/90">
+                    <p className="whitespace-pre-line text-sm leading-relaxed text-slate-200">
                       {selectedAchievement.details}
                     </p>
                   </div>
@@ -262,7 +249,8 @@ export function WinsSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
