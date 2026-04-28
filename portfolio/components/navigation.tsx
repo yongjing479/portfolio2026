@@ -23,8 +23,8 @@ export function Navigation() {
         
         <Button 
           asChild
-          className="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground hover:scale-[1.03] transition-all border-none"
-          style={{ background: 'rgba(255, 255, 255, 0.05)' }}
+          className=" rounded-full px-6 py-2.5 text-sm text-foreground border border-border bg-secondary transition-colors hover:bg-transparent hover:border-secondary hover:text-primary"
+         
         >
           <Link href="#contact">Contact Me</Link>
         </Button>

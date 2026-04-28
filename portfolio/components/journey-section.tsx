@@ -36,7 +36,7 @@ export function JourneySection() {
   ];
 
   return (
-    <section id="journey" className="liquid-glass rounded-[40px] p-8 md:p-12 shadow-2xl backdrop-blur-md">
+    <section id="journey" className="liquid-glass rounded-[40px] p-8 md:p-12 shadow-2xl backdrop-blur-lg">
       <ScrollReveal>
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-[300px_1fr]">
@@ -54,13 +54,13 @@ export function JourneySection() {
               </p>
 
               {/* Tech Stack Card */}
-              <div className="mt-8 rounded-lg border border-border bg-card p-4">
-                <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              <div className="mt-8 rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/80">
                   Core Tech Stack
                 </p>
-                <div className="mt-4 grid grid-cols-2 gap-3">
+                <div className="mt-4 grid grid-cols-2 gap-y-4 gap-x-6">
                   {techStack.map((tech) => (
-                    <span key={tech.name} className="text-sm text-foreground">
+                    <span key={tech.name} className="text-sm font-medium text-foreground">
                       {tech.name}
                     </span>
                   ))}

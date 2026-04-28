@@ -102,7 +102,6 @@ export function WinsSection() {
   // Handle opening animation
   useEffect(() => {
     if (selectedAchievement && !isClosing) {
-      // Small delay to trigger animation
       requestAnimationFrame(() => {
         setIsVisible(true);
       });
@@ -170,100 +169,97 @@ export function WinsSection() {
         <div
           className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300 ease-out ${
             isVisible
-              ? "bg-black/70 backdrop-blur-sm"
+              ? "bg-black/60 backdrop-blur-md" 
               : "bg-black/0 backdrop-blur-none"
           }`}
           onClick={handleBackdropClick}
         >
           <div
-            className={`relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-border bg-background p-6 shadow-2xl transition-all duration-300 ease-out ${
+            className={`relative flex flex-col max-h-[85vh] w-full max-w-2xl rounded-2xl border border-white/10 shadow-2xl transition-all duration-300 ease-out liquid-glass bg-black/80 backdrop-blur-xl ${
               isVisible
                 ? "opacity-100 scale-100 translate-y-0"
                 : "opacity-0 scale-95 translate-y-4"
             }`}
             onClick={(e) => e.stopPropagation()}
           >
-            <div
-              className={`relative mb-6 aspect-video w-full overflow-hidden rounded-xl bg-white/5 border border-border transition-all duration-500 delay-100 ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-2"
-              }`}
-            >
-              {/* Close Button - floats on image */}
-              <button
-                onClick={handleClose}
-                className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white/80 backdrop-blur-sm transition-all duration-200 hover:bg-primary hover:text-white hover:rotate-90 hover:scale-110 active:scale-95"
-                aria-label="Close"
-              >
-                <X className="h-5 w-5" />
-              </button>
-              {selectedAchievement.image ? (
-                <Image
-                  src={selectedAchievement.image}
-                  alt={selectedAchievement.title}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 800px"
-                />
-              ) : (
-                <div className="flex h-full items-center justify-center text-muted-foreground">
-                  <span className="text-sm">Competition Image</span>
-                </div>
-              )}
-            </div>
-
-            {/* Content */}
-            <div className="space-y-4">
+            {/* NEW SCROLLABLE INNER CONTAINER */}
+            <div className="overflow-y-auto p-6 custom-scrollbar">
               <div
-                className={`transition-all duration-500 delay-150 ${
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-2"
+                className={`relative mb-6 aspect-video w-full overflow-hidden rounded-xl bg-white/5 border border-border transition-all duration-500 delay-100 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
                 }`}
               >
-                <span className="text-xs font-medium text-primary">
-                  {selectedAchievement.date}
-                </span>
-                <h3 className="mt-1 text-2xl font-bold text-foreground">
-                  {selectedAchievement.title}
-                </h3>
-                <p className="mt-1 text-sm text-primary">
-                  by {selectedAchievement.org}
-                </p>
+                {/* Close Button - floats on image */}
+                <button
+                  onClick={handleClose}
+                  className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white/80 backdrop-blur-sm transition-all duration-200 hover:bg-primary hover:text-white hover:rotate-90 hover:scale-110 active:scale-95"
+                  aria-label="Close"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+                
+                {selectedAchievement.image ? (
+                  <Image
+                    src={selectedAchievement.image}
+                    alt={selectedAchievement.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 800px"
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center text-muted-foreground">
+                    <span className="text-sm">Competition Image</span>
+                  </div>
+                )}
               </div>
 
-              <div
-                className={`space-y-3 border-t border-border pt-4 transition-all duration-500 delay-200 ${
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-2"
-                }`}
-              >
-                <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                  About
-                </h4>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {selectedAchievement.description}
-                </p>
-              </div>
-
-              {selectedAchievement.details && (
+              {/* Content */}
+              <div className="space-y-4">
                 <div
-                  className={`space-y-3 border-t border-border pt-4 transition-all duration-500 delay-300 ${
-                    isVisible
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-2"
+                  className={`transition-all duration-500 delay-150 ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+                  }`}
+                >
+                  <span className="text-xs font-medium text-primary">
+                    {selectedAchievement.date}
+                  </span>
+                  <h3 className="mt-1 text-2xl font-bold text-foreground">
+                    {selectedAchievement.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-primary">
+                    by {selectedAchievement.org}
+                  </p>
+                </div>
+
+                <div
+                  className={`space-y-3 border-t border-border pt-4 transition-all duration-500 delay-200 ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
                   }`}
                 >
                   <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-                    Details
+                    About
                   </h4>
-                  <p className="whitespace-pre-line text-sm leading-relaxed text-foreground">
-                    {selectedAchievement.details}
+                  {/* Updated text color to white/80 for better readability on blur */}
+                  <p className="text-sm leading-relaxed text-white/80">
+                    {selectedAchievement.description}
                   </p>
                 </div>
-              )}
+
+                {selectedAchievement.details && (
+                  <div
+                    className={`space-y-3 border-t border-border pt-4 transition-all duration-500 delay-300 ${
+                      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+                    }`}
+                  >
+                    <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                      Details
+                    </h4>
+                    <p className="whitespace-pre-line text-sm leading-relaxed text-white/90">
+                      {selectedAchievement.details}
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

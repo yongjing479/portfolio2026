@@ -4,10 +4,10 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Brand Colors from guidelines */
-  --brand-primary: #8A2BE2;
-  --brand-secondary: #8E64BA;
-  --brand-tertiary: #935400;
+  /* Brand Colors - Updated from Purple to Cyan */
+  --brand-primary: #06b6d4;    /* Cyan 500 */
+  --brand-secondary: #0891b2;  /* Cyan 600 */
+  --brand-tertiary: #935400;   /* Keeping your tertiary brown/gold */
   --brand-neutral: #000000;
   
   /* Dark theme as default */
@@ -17,72 +17,51 @@
   --card-foreground: #fafafa;
   --popover: #141414;
   --popover-foreground: #fafafa;
-  --primary: #8A2BE2;
-  --primary-foreground: #ffffff;
-  --secondary: #8E64BA;
+  
+  /* Primary & Accents updated to Cyan */
+  --primary: #06b6d4;
+  --primary-foreground: #000000;
+  --secondary: #0891b2;
   --secondary-foreground: #ffffff;
   --muted: #1a1a1a;
-  --muted-foreground: #a1a1a1;
-  --accent: #8A2BE2;
-  --accent-foreground: #ffffff;
+  --muted-foreground: 0 0% 80%;
+  --accent: #06b6d4;
+  --accent-foreground: #000000;
   --tertiary: #935400;
   --tertiary-foreground: #ffffff;
+  
   --destructive: #dc2626;
   --destructive-foreground: #fafafa;
   --border: #262626;
   --input: #262626;
-  --ring: #8A2BE2;
-  --chart-1: #8A2BE2;
-  --chart-2: #8E64BA;
-  --chart-3: #935400;
-  --chart-4: #a855f7;
-  --chart-5: #c084fc;
+  --ring: #06b6d4;
+  
+  /* Chart colors updated to Cyan scale */
+  --chart-1: #06b6d4;
+  --chart-2: #0891b2;
+  --chart-3: #22d3ee;
+  --chart-4: #67e8f9;
+  --chart-5: #a5f3fc;
+  
   --radius: 0.625rem;
+  
+  /* Sidebar updated to Cyan */
   --sidebar: #141414;
   --sidebar-foreground: #fafafa;
-  --sidebar-primary: #8A2BE2;
+  --sidebar-primary: #06b6d4;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #1a1a1a;
   --sidebar-accent-foreground: #fafafa;
   --sidebar-border: #262626;
-  --sidebar-ring: #8A2BE2;
+  --sidebar-ring: #06b6d4;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #fafafa;
-  --card: #141414;
-  --card-foreground: #fafafa;
-  --popover: #141414;
-  --popover-foreground: #fafafa;
-  --primary: #8A2BE2;
-  --primary-foreground: #ffffff;
-  --secondary: #8E64BA;
-  --secondary-foreground: #ffffff;
-  --muted: #1a1a1a;
-  --muted-foreground: #a1a1a1;
-  --accent: #8A2BE2;
-  --accent-foreground: #ffffff;
-  --tertiary: #935400;
-  --tertiary-foreground: #ffffff;
-  --destructive: #dc2626;
-  --destructive-foreground: #fafafa;
-  --border: #262626;
-  --input: #262626;
-  --ring: #8A2BE2;
-  --chart-1: #8A2BE2;
-  --chart-2: #8E64BA;
-  --chart-3: #935400;
-  --chart-4: #a855f7;
-  --chart-5: #c084fc;
-  --sidebar: #141414;
-  --sidebar-foreground: #fafafa;
-  --sidebar-primary: #8A2BE2;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1a1a1a;
-  --sidebar-accent-foreground: #fafafa;
-  --sidebar-border: #262626;
-  --sidebar-ring: #8A2BE2;
+  /* Dark mode overrides (keeping them consistent with your dark-first approach) */
+  --primary: #06b6d4;
+  --accent: #06b6d4;
+  --ring: #06b6d4;
+  --sidebar-primary: #06b6d4;
 }
 
 @theme inline {
@@ -140,29 +119,14 @@
   }
 }
 
-@layer base {
-  :root {
-    --background: 201 100% 13%;
-    --foreground: 0 0% 100%;
-    --muted-foreground: 240 4% 66%;
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 4%;
-    --secondary: 0 0% 10%;
-    --muted: 0 0% 10%;
-    --accent: 0 0% 10%;
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-  }
-}
-
 /* Liquid Glass Effect */
 .liquid-glass {
   background: rgba(255, 255, 255, 0.01);
-  backdrop-filter: blur(8px); /* Increased blur for a more premium glass feel */
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
-  border: none !important; /* Removes any default shadcn borders */
+  border: none !important;
 }
 
 .liquid-glass::before {
@@ -170,8 +134,7 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px; /* Slightly thinner line for elegance */
-  /* This creates the thin "rim" light on the edge of the glass */
+  padding: 1px;
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.3) 0%, 

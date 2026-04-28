@@ -11,7 +11,7 @@ export function HeroSection() {
             className="animate-fade-rise text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-7xl font-normal text-foreground"
             style={{ fontFamily: "'Instrument Serif', serif" }}
           >
-            I am <em className="not-italic text-muted-foreground">Yong Jing</em>
+            I am <em className="not-italic text-primary">Yong Jing</em>
           </h1>
           
           <p className="animate-fade-rise-delay text-muted-foreground text-base sm:text-lg max-w-2xl mt-8 leading-relaxed">
