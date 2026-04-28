@@ -28,8 +28,8 @@ export function ContactSection() {
               <span className="text-muted-foreground">together</span>
             </h2>
             <p className="mx-auto mt-6 max-w-md text-muted-foreground">
-              Always open to discussing high-impact projects, design
-              consultations.
+              Open to UI/UX internship and full-time opportunities.
+              Happy to connect and chat about meaningful product work.
             </p>
 
             <div className="mt-12 flex items-center justify-center gap-12">
@@ -39,7 +39,7 @@ export function ContactSection() {
                   href={contact.href}
                   className="group flex flex-col items-center gap-3 transition-colors"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-secondary transition-colors group-hover:border-primary group-hover:bg-primary/10">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-secondary bg-secondary transition-colors group-hover:border-primary group-hover:bg-primary/10">
                     {contact.isCustom ? (
                       <img
                         src={contact.icon as string}
@@ -59,7 +59,7 @@ export function ContactSection() {
           </div>
 
           {/* Footer */}
-          <footer className="mt-16 border-t border-border pt-8 text-center">
+          <footer className="mt-16 border-t border-white/10 pt-8 text-center">
             <p className="text-sm text-foreground">
               Designed & Built by Yong Jing
             </p>

@@ -15,7 +15,7 @@ export function HeroSection() {
           </h1>
           
           <p className="animate-fade-rise-delay text-muted-foreground text-base sm:text-lg max-w-2xl mt-8 leading-relaxed">
-            UI/UX Designer with a Software Engineering background, passionate about building thoughtful, user-centered digital experiences. 
+            Software Engineering graduate from Universiti Malaya with a strong interest in UI/UX design and user-centered digital experiences.
           </p>
         </div>
       </ScrollReveal>

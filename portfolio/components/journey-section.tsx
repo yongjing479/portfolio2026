@@ -49,8 +49,7 @@ export function JourneySection() {
                 My Journey
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Building scalable digital infrastructures and high-fidelity user
-                interfaces across diverse ecosystems.
+                From building systems to designing experiences, I focus on turning complex ideas into intuitive, user-centered solutions.
               </p>
 
               {/* Tech Stack Card */}
@@ -76,7 +75,7 @@ export function JourneySection() {
                   <div className="absolute left-0 top-2 h-2 w-2 rounded-full bg-primary" />
                   {/* Timeline line */}
                   {index !== experiences.length - 1 && (
-                    <div className="absolute left-[3px] top-4 h-full w-px bg-border" />
+                    <div className="absolute left-[3px] top-4 h-full w-px bg-white/10" />
                   )}
 
                   <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
