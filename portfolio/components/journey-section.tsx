@@ -3,14 +3,11 @@
 import { ScrollReveal } from "./scroll-reveal";
 
 export function JourneySection() {
-  const techStack = [
-    { name: "Figma", category: "Design" },
-    { name: "React", category: "Frontend" },
-    { name: "Javascript", category: "Language" },
-    { name: "HTML & CSS", category: "Frontend" },
-    { name: "PostgreSQL", category: "Database" },
-    { name: "Golang", category: "Backend" },
-  ];
+  const techStack = {
+  design: ["Wireframing", "Prototyping"],
+  tools: ["Figma", "Canva"],
+  dev: ["React", "JavaScript", "HTML & CSS"],
+};
 
   const experiences = [
     {
@@ -55,15 +52,44 @@ export function JourneySection() {
               {/* Tech Stack Card */}
               <div className="mt-8 rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/80">
-                  Core Tech Stack
+                   Skills & Tools
                 </p>
-                <div className="mt-4 grid grid-cols-2 gap-y-4 gap-x-6">
-                  {techStack.map((tech) => (
-                    <span key={tech.name} className="text-sm font-medium text-foreground">
-                      {tech.name}
-                    </span>
-                  ))}
+                <div className="mt-4 space-y-4 text-sm">
+
+                <div>
+                  <p className="text-xs text-primary/70">UX & Design</p>
+                  <div className="mt-2 grid grid-cols-2 gap-2">
+                    {techStack.design.map((item) => (
+                      <span key={item} className="text-foreground">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+
+                <div>
+                  <p className="text-xs text-primary/70">Tools</p>
+                  <div className="mt-2 grid grid-cols-2 gap-2">
+                    {techStack.tools.map((item) => (
+                      <span key={item} className="text-foreground">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-xs text-primary/70">Frontend</p>
+                  <div className="mt-2 grid grid-cols-2 gap-2">
+                    {techStack.dev.map((item) => (
+                      <span key={item} className="text-foreground">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
               </div>
             </div>
 
