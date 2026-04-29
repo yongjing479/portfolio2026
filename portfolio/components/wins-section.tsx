@@ -25,6 +25,22 @@ export function WinsSection() {
 
   const achievements: Achievement[] = [
     {
+      date: "Dec 2023",
+      title: "Champion - DevHack 2023 (International Hackathon)",
+      org: "Google Developer Groups Georgetown",
+      description:
+        "Led UI/UX design & pitched an app named FreshRescue which rescues visually imperfect foods & nearly expired food.",
+      image: "/devhack.jpeg",
+      details:
+        "As the Lead Designer, I focused on creating an intuitive B2B2C marketplace that bridges the gap between surplus food suppliers and eco-conscious consumers.\n\n" +
+        "DESIGN ARCHITECTURE:\n" +
+        "• User Flow Optimization: Defined complex flows for multi-persona features, including 'Surprise Bag' purchases, seamless donation channels, and community engagement hubs.\n" +
+        "• Intuitive Interface: Designed high-fidelity interfaces in Figma with a focus on accessibility, ensuring that users of all ages could navigate the 'Rescue' process easily.\n\n" +
+        "PROJECT IMPACT:\n" +
+        "• Global Competition: Outperformed 154 teams from 9 countries to secure the Champion title.\n" +
+        "• Problem-Solving: Translated the abstract problem of food waste into a tangible, high-impact digital solution recognized for its scalability and user-centric approach.",
+    },
+    {
       date: "Oct 2025",
       title: "First Runner Up - Youth Leadership Academy 2025",
       org: "McKinsey & Company X Teach for Malaysia",
@@ -83,22 +99,6 @@ export function WinsSection() {
         "• Leadership: Managed a 10-person creative squad across stage, and merchandise departments.\n" +
         "• UX Audit: Led the UI/UX direction for the event website to ensure clear navigation for 500+ attendees.\n" +
         "• Branding: Maintained strict visual consistency across all physical print and digital touchpoints.",
-    },
-    {
-      date: "Dec 2023",
-      title: "Champion - DevHack 2023 (International Hackathon)",
-      org: "Google Developer Groups Georgetown",
-      description:
-        "Led UI/UX design & pitched an app named FreshRescue which rescues visually imperfect foods & nearly expired food.",
-      image: "/devhack.jpeg",
-      details:
-        "As the Lead Designer, I focused on creating an intuitive B2B2C marketplace that bridges the gap between surplus food suppliers and eco-conscious consumers.\n\n" +
-        "DESIGN ARCHITECTURE:\n" +
-        "• User Flow Optimization: Defined complex flows for multi-persona features, including 'Surprise Bag' purchases, seamless donation channels, and community engagement hubs.\n" +
-        "• Intuitive Interface: Designed high-fidelity interfaces in Figma with a focus on accessibility, ensuring that users of all ages could navigate the 'Rescue' process easily.\n\n" +
-        "PROJECT IMPACT:\n" +
-        "• Global Competition: Outperformed 154 teams from 9 countries to secure the Champion title.\n" +
-        "• Problem-Solving: Translated the abstract problem of food waste into a tangible, high-impact digital solution recognized for its scalability and user-centric approach.",
     },
   ];
 
