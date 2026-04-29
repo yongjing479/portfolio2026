@@ -10,25 +10,12 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'Yong Jing | UI/UX Designer & Full Stack Developer',
+  title: 'Yong Jing Ng',
   description: 'A software engineering fresh graduate passionate about UI/UX Design and solving real world problems using technology.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon:'/icon2.png',
+    apple: '/icon2.png',
   },
 }
 
